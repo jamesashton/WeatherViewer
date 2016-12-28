@@ -7,7 +7,14 @@
     <groupId>weather.viewer</groupId>
     <artifactId>parent</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <packaging>pom</packaging>
+    <modules>
+        <module>../weather-service</module>
+    </modules>
+    <properties>
+        <junit.version>4.12</junit.version>
+    </properties>
+
+
 
 </project>
