@@ -25,4 +25,9 @@ public class CurrentWeatherDataServiceIT {
         Assert.assertNotNull(currentWeatherDataService);
     }
 
+    @Test
+    public void checkThatGetCurrentWeatherDataReturnsDataForKnownCity() {
+        CurrentWeatherData currentWeatherData = currentWeatherDataService.currentWeatherDataForCity("London");
+        Assert.assertNotNull(currentWeatherData);
+    }
 }

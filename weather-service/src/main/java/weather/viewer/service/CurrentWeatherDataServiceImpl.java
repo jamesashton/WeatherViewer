@@ -16,6 +16,6 @@ public class CurrentWeatherDataServiceImpl implements CurrentWeatherDataService 
     private WeatherDataClient weatherDataClient;
 
     public CurrentWeatherData currentWeatherDataForCity(String city) {
-        return null;
+        return weatherDataClient.getCurrentWeatherData(city);
     }
 }

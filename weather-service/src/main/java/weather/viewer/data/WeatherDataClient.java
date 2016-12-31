@@ -7,6 +7,6 @@ import weather.viewer.model.CurrentWeatherData;
  */
 public interface WeatherDataClient {
 
-    CurrentWeatherData fetchCurrentWeatherDataForCity(String city);
+    CurrentWeatherData getCurrentWeatherData(String city);
 
 }
