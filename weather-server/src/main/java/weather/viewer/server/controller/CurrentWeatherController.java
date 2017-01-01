@@ -1,10 +1,7 @@
 package weather.viewer.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import weather.viewer.model.CurrentWeatherData;
 import weather.viewer.service.CurrentWeatherDataService;
 
@@ -18,11 +15,10 @@ public class CurrentWeatherController {
     @Autowired
     CurrentWeatherDataService currentWeatherDataService;
 
-    @RequestMapping(value="/{city}",method = RequestMethod.GET)
-    CurrentWeatherData currentWeatherForCity(@PathVariable("city") String city){
+    @RequestMapping(method = RequestMethod.GET)
+    CurrentWeatherData currentWeatherForCity(@RequestParam("city") String city){
         CurrentWeatherData currentWeatherData = currentWeatherDataService.currentWeatherDataForCity(city);
         return currentWeatherData;
     }
-
 
 }
