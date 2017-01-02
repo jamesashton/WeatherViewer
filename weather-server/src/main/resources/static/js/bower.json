@@ -1,0 +1,25 @@
+{
+  "name": "js",
+  "version": "0.0.0",
+  "authors": [
+    "James Ashton <james@akanet.co.uk>"
+  ],
+  "main": "main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~15.4.1",
+    "babel": "~5.8.38",
+    "requirejs-react-jsx": "~1.0.2",
+    "requirejs": "~2.3.2",
+    "requirejs-text": "~2.0.15",
+    "jquery": "~3.1.1"
+  }
+}
+

@@ -28,7 +28,7 @@ public class WeatherDataClientImpl implements WeatherDataClient {
             ObjectMapper objectMapper = new ObjectMapper();
             CurrentWeatherData result = objectMapper.readValue(responseText, CurrentWeatherData.class);
             return result;
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Error fetching current weather data for City:" + city, e);
         }
     }
