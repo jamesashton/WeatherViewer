@@ -23,7 +23,4 @@ NOTE: Bower and Maven are required to build the solution. In case you are unable
 > cd ../weather-server
 > mvn spring-boot:run
 
-4. View the application by pointing your browser to:
-
-http://localhost:8080
-
+4. View the application by pointing your browser to http://localhost:8080
