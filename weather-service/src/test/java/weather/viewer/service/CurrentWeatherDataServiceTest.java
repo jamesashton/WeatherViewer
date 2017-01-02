@@ -12,6 +12,7 @@ import weather.viewer.data.FixedTestData;
 import weather.viewer.data.WeatherDataClient;
 import weather.viewer.data.WeatherDataClientImpl;
 import weather.viewer.model.CurrentWeatherData;
+import weather.viewer.util.CityValidator;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,10 +32,14 @@ public class CurrentWeatherDataServiceTest {
     @Mock
     private WeatherDataClient weatherDataClient;
 
+    @Mock
+    private CityValidator cityValidator;
+
     @Before
     public void setup() throws IOException {
         MockitoAnnotations.initMocks(this);
         Mockito.when(weatherDataClient.getCurrentWeatherData(TEST_CITY)).thenReturn(FixedTestData.forMoscow());
+        Mockito.when(cityValidator.isValid(TEST_CITY)).thenReturn(true);
     }
 
     @Test

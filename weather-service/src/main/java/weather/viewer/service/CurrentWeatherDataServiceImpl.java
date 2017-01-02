@@ -1,6 +1,8 @@
 package weather.viewer.service;
 
+import com.googlecode.ehcache.annotations.Cacheable;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import weather.viewer.data.WeatherDataClient;
 import weather.viewer.model.CurrentWeatherData;
@@ -19,6 +21,7 @@ public class CurrentWeatherDataServiceImpl implements CurrentWeatherDataService 
     @Autowired
     private CityValidator cityValidator;
 
+    @Cacheable(cacheName="currentWeatherCache")
     public CurrentWeatherData currentWeatherDataForCity(String city) {
         return cityValidator.isValid(city) ? weatherDataClient.getCurrentWeatherData(city) : null;
     }

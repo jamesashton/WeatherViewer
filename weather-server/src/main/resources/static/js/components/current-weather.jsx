@@ -20,9 +20,9 @@ define(function (require) {
         },
         getTitle: function() {
             if(this.state.selectedCity){
-                return(<h1>Current Weather: {this.state.selectedCity}</h1>);
+                return(<h4>Current Weather in {this.state.selectedCity}</h4>);
             } else {
-                return(<h1>Current Weather: Please select City</h1>);
+                return(<h4>Select City:</h4>);
             }
         },
         changeCity: function(event) {

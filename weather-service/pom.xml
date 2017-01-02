@@ -42,6 +42,11 @@
             <version>${spring-framework.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.ehcache-spring-annotations</groupId>
+            <artifactId>ehcache-spring-annotations</artifactId>
+            <version>${ehcache-spring-annotations.version}</version>
+        </dependency>
 
         <!-- MISC -->
         <dependency>
