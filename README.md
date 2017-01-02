@@ -9,21 +9,36 @@ NOTE: Bower and Maven are required to build the solution. In case you are unable
 
 # INSTRUCTIONS #
 
-1. Run the following in #project-root#/weather-server/src/main/resources/static/js to install the JavaScript dependencies:
+1 - Run the following in #project-root#/weather-server/src/main/resources/static/js to install the JavaScript dependencies:
+```
+#!bash
 
 > bower install
+```
 
-2. Run Maven on the parent project to resolve Java dependencies, run unit tests and compile:
+
+2 - Run Maven on the parent project to resolve Java dependencies, run unit tests and compile:
+```
+#!bash
 
 > cd parent
 > mvn clean install
+```
 
-3. Start the application by changing directory to 
+
+3 - Start the application by changing directory and running the 'run' spring boot Maven goal.
+```
+#!bash
 
 > cd ../weather-server
 > mvn spring-boot:run
+```
 
-4. View the application by pointing your browser to:
+
+4 - View the application by pointing your browser to 
+
+```
+#!bash
 
 http://localhost:8080
-
+```
