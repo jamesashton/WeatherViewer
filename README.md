@@ -11,7 +11,13 @@ NOTE: Bower and Maven are required to build the solution. In case you are unable
 
 1 - Run the following in #project-root#/weather-server/src/main/resources/static/js to install the JavaScript dependencies:
 
+
+```
+#!bash
+
 > bower install
+```
+
 
 2 - Run Maven on the parent project to resolve Java dependencies, run unit tests and compile:
 
